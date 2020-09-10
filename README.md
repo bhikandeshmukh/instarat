@@ -18,7 +18,7 @@
 ###### <p align="center"> *[**@bhikan_deshmukh**](https://www.instagram.com/bhikan_deshmukh/) ❤️*
 ###### <p align="center"> *You can check [Instagram](https://www.instagram.com/bhikan_deshmukh)✌*
 ---
-### What is Shark??
+### What is instarat??
 INSTARAT is powered by aladdin coded by @bhikan_deshmukh. Instarat help u for increasing Instagram followers
 
 ### Requirements :-
@@ -28,7 +28,7 @@ INSTARAT is powered by aladdin coded by @bhikan_deshmukh. Instarat help u for in
 3) give us 1 star on GitHub
 
 
-### Installation Shark
+### Installation Instarat
 * `Commands` for termux
 ```
 $ pkg up -y
@@ -48,11 +48,14 @@ $ chmod +x instarat.sh
 $ termux-wake-lock
 
 $ bash instarat.sh
-
-one click after downloading
-
-$ cd instarat && chmod +x instarat.sh && bash instarat.sh
 ```
+
+### One Click Installation
+
+```
+$ git clone https://github.com/thebhikandeshmukh/instarat && cd instarat && chmod +x instarat.sh && bash instarat.sh
+```
+
 ### Screenshots
 
 ***
