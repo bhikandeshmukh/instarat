@@ -14,23 +14,8 @@ var2=$(echo $var | grep -o 'csrftoken=.*' | cut -d ';' -f1 | cut -d '=' -f2)
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 clear
-echo " I N S T A R A T "
-echo "powered by"
-banner() {
-echo ""
-echo -e "\e[1;92m          oooo                  .o8        .o8   o8o              \e"
-echo -e "\e[1;92m          `888                 "888       "888   `"'              \e"
-echo -e "\e[1;91m .oooo.    888   .oooo.    .oooo888   .oooo888  oooo  ooo. .oo.   \e"
-echo -e "\e[1;91m`P  )88b   888  `P  )88b  d88' `888  d88' `888  `888  `888P"Y88b  \e"
-echo -e "\e[1;91m .oP"888   888   .oP"888  888   888  888   888   888   888   888  \e"
-echo -e "\e[1;92md8(  888   888  d8(  888  888   888  888   888   888   888   888  \e"
-echo -e "\e[1;92m`Y888""8o o888o `Y888""8o `Y8bod88P" `Y8bod88P" o888o o888o o888o \e"
-echo ""                                                                  
-echo -e "\e[1;91m [+] Instagram: \e[1;92m@bhikan_deshmukh"
-echo -e "\e[1;91m [+] Coded by: \e[1;92mBhikan Deshmukh\e[1;97m"
-echo ""
 
-}     
+echo" I N S T A R A T"
 
 login_user() {
 
