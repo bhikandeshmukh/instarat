@@ -50,7 +50,7 @@ $ termux-wake-lock
 $ bash instarat.sh
 ```
 
-### One Click Installation
+* One Click Installation
 
 ```
 $ git clone https://github.com/thebhikandeshmukh/instarat && cd instarat && chmod +x instarat.sh && bash instarat.sh
