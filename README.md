@@ -48,6 +48,10 @@ $ chmod +x instarat.sh
 $ termux-wake-lock
 
 $ bash instarat.sh
+
+one click after downloading
+
+$ cd instarat && chmod +x instarat.sh && bash instarat.sh
 ```
 ### Screenshots
 
