@@ -15,7 +15,19 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 clear
 
-echo" I N S T A R A T"
+banner() {
+echo ""
+echo -e "\e[1;91m___ _   _ ____ _____  _    ____      _  _____ "
+echo -e "\e[1;91m|_ _| \ | / ___|_   _|/ \  |  _ \    / \|_   _|"
+echo -e "\e[1;91m| ||  \| \___ \ | | / _ \ | |_) |  / _ \ | |  "
+echo -e "\e[1;91m| || |\  |___) || |/ ___ \|  _ <  / ___ \| |  "
+echo -e "\e[1;91m|___|_| \_|____/ |_/_/   \_\_| \_\/_/   \_\_|  "
+echo ""
+echo -e "\e[1;91m [+] Instagram: \e[1;92m@bhikan_deshmukh"
+echo -e "\e[1;91m [+] powered by: \e[1;92maladdin\e[1;97m"
+echo ""
+
+}     
 
 login_user() {
 
