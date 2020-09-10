@@ -43,11 +43,11 @@ $ git clone https://github.com/thebhikandeshmukh/instarat
 
 `$ cd instarat`
 
-`$ chmod +x instarat.sh`
+$ chmod +x instarat.sh
 
-`$ termux-wake-lock`
+$ termux-wake-lock
 
-`$ bash instarat.sh`
+$ bash instarat.sh
 ```
 ### Screenshots
 
