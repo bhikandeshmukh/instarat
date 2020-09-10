@@ -41,7 +41,7 @@ $ pkg install git
 
 $ git clone https://github.com/thebhikandeshmukh/instarat
 
-`$ cd instarat`
+$ cd instarat
 
 $ chmod +x instarat.sh
 
