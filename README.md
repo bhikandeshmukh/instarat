@@ -19,9 +19,7 @@
 ###### <p align="center"> *You can check [Instagram](https://www.instagram.com/bhikan_deshmukh)✌*
 ---
 ### What is Shark??
-Shark is a tool that will help you do Phishing in advance way so no check and identify that you are you doing phishing. we guys have add a feature of custom link so the normal link of ngrok that will change in to different link in the tool it self and you can customise that link also like you can make https://google.com/gvbrvbtfg/ftps.io
-That way no one will caught that you are phishing
-Hope you guys like this Project,then dont forget to give it a like.
+INSTARAT is powered by aladdin coded by @bhikan_deshmukh. Instarat help u for increasing Instagram followers
 
 ### Requirements :-
 
