@@ -29,6 +29,12 @@ INSTARAT is powered by aladdin coded by @bhikan_deshmukh. Instarat help u for in
 
 
 ### Installation Instarat
+
+* termux update required
+
+```
+$ apt update -y apt upgrade -y
+```
 * `Commands` for termux
 ```
 $ pkg up -y
