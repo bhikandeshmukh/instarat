@@ -33,7 +33,7 @@ INSTARAT is powered by aladdin coded by @bhikan_deshmukh. Instarat help u for in
 * termux update required
 
 ```
-$ apt update -y apt upgrade -y
+$ apt update -y && apt upgrade -y
 ```
 * `Commands` for termux
 ```
@@ -59,7 +59,7 @@ $ bash instarat.sh
 * One Click Installation
 
 ```
-$ git clone https://github.com/thebhikandeshmukh/instarat && cd instarat && chmod +x instarat.sh && bash instarat.sh
+$ pkg up -y && pkg install openssl-tool && pkg install curl && pkg install git && git clone https://github.com/thebhikandeshmukh/instarat && cd instarat && chmod +x instarat.sh && bash instarat.sh
 ```
 
 ### Screenshots
