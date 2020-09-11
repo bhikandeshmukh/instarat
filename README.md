@@ -1,11 +1,11 @@
 <p align="center"><a><img title="Built With Love" src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg"> </a>
 
-# <p align="center">Instarat<p align="center">
+# <p align="center">INSTARAT<p align="center">
 <p align="center">powered by aladdin<p align="center">
 
 <img src="https://i.imgur.com/ojEA1aj.jpg"></p>
   
-<p align="center">Future of Phishing is here<p align="center">
+<p align="center">Get 100% Real Indian Followers<p align="center">
 <a href="https://github.com/thebhikandeshmukh"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red" ></a>
 <a href="https://instamojo.com/@dpanshunarwal"><img title="Donate" src="https://img.shields.io/badge/Donate-Paytm-blue" ></a>
 <a href="https://github.com/thebhikandeshmukh/Termux-Keys"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.0&x2=0" ></a>
