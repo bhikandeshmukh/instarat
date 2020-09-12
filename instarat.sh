@@ -409,29 +409,28 @@ sleep 5
 username_id=$(curl -L -s 'https://www.instagram.com/'$user'' > getid && grep -o  'profilePage_[0-9]*.' getid | cut -d "_" -f2 | tr -d '"')
 
 iamsrk="628480450"
-beingsalmankhan="1547627005"
-sureshraina3="1497970451"
-priyankachopra="178537482"
-amitabhbachchan="314761038"
-tigerjackieshroff="1036534773"
-thesiddharthnigam="1714305872"
-
 aliaabhatt="259925762"
-raghavjuyal="1267622690"
+sahilkhan="371137794"
 karantacker="43034052"
 akshaykumar="907025384"
 darshanravaldz="478675749"
 ranveersingh="1506896522"
 hrithikroshan="414113135"
 filmygyan="1332864305"
+
 ranbirkapoor="1432830719"
+raghavjuyal="1267622690"
 shahidkapoor="550150293"
+priyankachopra="178537482"
+tigerjackieshroff="1036534773"
+thesiddharthnigam="1714305872"
+beingsalmankhan="1547627005"
+amitabhbachchan="314761038"
 deepikapadukone="572299277"
-sahilkhan="371137794"
 
 
 if [[ ! -e celeb_id ]]; then
-printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n" $iamsrk $beingsalmankhan $sureshraina3 $priyankachopra $amitabhbachchan $tigerjackieshroff $thesiddharthnigam $aliaabhatt $raghavjuyal $karantacker $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $shahidkapoor $deepikapadukone $sahilkhan > celeb_id
+printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n" $iamsrk $aliaabhatt $sahilkhan $karantacker $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $raghavjuyal $shahidkapoor $priyankachopra $tigerjackieshroff $thesiddharthnigam $beingsalmankhan $amitabhbachchan $deepikapadukone > celeb_id
 fi
 
 while [[ true ]]; do
