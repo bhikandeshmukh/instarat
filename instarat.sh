@@ -430,7 +430,7 @@ deepikapadukone="572299277"
 
 
 if [[ ! -e celeb_id ]]; then
-printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n" $iamsrk $aliaabhatt $sahilkhan $karantacker $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $raghavjuyal $shahidkapoor $priyankachopra $tigerjackieshroff $thesiddharthnigam $beingsalmankhan $amitabhbachchan $deepikapadukone > celeb_id
+printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n" $iamsrk $aliaabhatt $sahilkhan $karantacker $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $akshaykumar $darshanravaldz $ranveersingh $hrithikroshan $filmygyan $ranbirkapoor $raghavjuyal $shahidkapoor $priyankachopra $tigerjackieshroff $thesiddharthnigam $beingsalmankhan $amitabhbachchan $deepikapadukone> celeb_id
 fi
 
 while [[ true ]]; do
