@@ -9,14 +9,13 @@
 
   <br>
 
-###### <p align="center"> Hunt down social media accounts by username across <a href="https://github.com/bhikandeshmukh/sherlock/blob/main/sites.md">social networks
+###### <p align="center"> INSTARAT
 <br>
 
 <img src="https://i.imgur.com/ojEA1aj.jpg"></p>
 
 ###### <p align="center">Get 100% Real Indian Followers<p align="center">
 <p align=center>
-  <a target="_blank" href="https://github.com/bhikandeshmukh/instarat/actions" title="Test Status"><img src="https://github.com/bhikandeshmukh/instarat/workflows/Tests/badge.svg?branch=main"></a>
   <a href="https://www.instagram.com/bhikan_deshmukh"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red" ></a>
   <a href="https://www.instagram.com/bhikan_deshmukh"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0&x2=0" ></a>
   <a href="https://www.instagram.com/bhikan_deshmukh"><img title="Stars" src="https://img.shields.io/github/stars/bhikandeshmukh/instarat?style=social" ></a>
@@ -87,4 +86,6 @@ Developer / Author: [Mr. Bee](https://www.instagram.com/bhikan_deshmukh/)
 <a href="https://t.me/dev_aladdin"><img title="Telegram" src="https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=Telegram"></a>
 <a href="https://rzp.io/l/mrbee"><img title="DONATE" src="https://img.shields.io/badge/DONATE-yellow?style=for-the-badge&logo=google-pay"></a>
 </p>
+
 -------------------------------------------------------------------------------------
+
