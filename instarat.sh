@@ -68,8 +68,59 @@ useragent='User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Trying to login as\e[0m\e[1;93m %s\e[0m\n" $user
 IFS=$'\n'
-var=$(curl -c cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/accounts/login/" | grep -o "logged_in_user\|challenge\|many tries\|Please wait" | uniq );
-if [[ $var == "challenge" ]]; then printf "\e[1;93m\n[!] Challenge required\n" ; exit 1; elif [[ $var == "logged_in_user" ]]; then printf "\e[1;92m \n[+] Login Successful\n" ; elif [[ $var == "Please wait" ]]; then echo "Please wait"; fi;
+login_response=$(curl -c cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/accounts/login/")
+var=$(echo "$login_response" | grep -o "logged_in_user\|challenge\|many tries\|Please wait" | uniq)
+
+if [[ $var == "challenge" ]]; then
+    printf "\e[1;93m\n[!] Challenge required\n"
+    printf "\e[1;77m[\e[0m\e[1;31m+\e[0m\e[1;77m] Trying to bypass challenge...\e[0m\n"
+    
+    # Extract challenge path from the response
+    challenge_url=$(echo "$login_response" | grep -o '"challenge": {"url": "[^"]*"' | cut -d'"' -f6)
+    
+    if [[ ! -z "$challenge_url" ]]; then
+        printf "\e[1;77m[\e[0m\e[1;31m+\e[0m\e[1;77m] Challenge URL found: %s\e[0m\n" "$challenge_url"
+        
+        # Try to request the challenge page
+        challenge_response=$(curl -L -b cookie.$user -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"' -H "$header" "$challenge_url")
+        
+        # Check if we can bypass with choice 1 (usually "This was me")
+        printf "\e[1;77m[\e[0m\e[1;31m+\e[0m\e[1;77m] Attempting to verify login...\e[0m\n"
+        choice_data='{"choice":"1", "_uuid":"'$guid'", "_uid":"'$user_id'", "_csrftoken":"'$var2'"}'
+        choice_hmac=$(echo -n "$choice_data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+        
+        verify_response=$(curl -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$choice_hmac.$choice_data" -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"' -H "$header" "$challenge_url")
+        
+        # Check if we successfully bypassed the challenge
+        if [[ $verify_response == *"logged_in_user"* ]]; then
+            printf "\e[1;92m \n[+] Challenge bypassed! Login Successful\e[0m\n"
+        else
+            # If we couldn't bypass automatically, ask for verification code
+            printf "\e[1;93m \n[!] Automatic bypass failed. You may need to enter a verification code.\e[0m\n"
+            read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Enter verification code from SMS/Email: \e[0m' verification_code
+            
+            # Submit the verification code
+            code_data='{"security_code":"'$verification_code'", "_uuid":"'$guid'", "_uid":"'$user_id'", "_csrftoken":"'$var2'"}'
+            code_hmac=$(echo -n "$code_data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+            
+            verify_code_response=$(curl -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$code_hmac.$code_data" -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"' -H "$header" "$challenge_url")
+            
+            if [[ $verify_code_response == *"logged_in_user"* ]]; then
+                printf "\e[1;92m \n[+] Verification successful! Login completed\e[0m\n"
+            else
+                printf "\e[1;91m \n[!] Verification failed. Please try again later.\e[0m\n"
+                exit 1
+            fi
+        fi
+    else
+        printf "\e[1;91m \n[!] Could not extract challenge URL. Try again later.\e[0m\n"
+        exit 1
+    fi
+elif [[ $var == "logged_in_user" ]]; then 
+    printf "\e[1;92m \n[+] Login Successful\e[0m\n"
+elif [[ $var == "Please wait" ]]; then 
+    echo "Please wait"
+fi
 
 fi
 
