@@ -166,9 +166,9 @@ maxid=$(grep -o '"next_max_id": "[^ ]*.' $user_account.following.temp | cut -d "
 
 if [[ $big_list == *'big_list": true'* ]]; then
 
-url="https://i.instagram.com/api/v1/friendships/6971563529/following/?rank_token=$user_id\_$guid&max_id=$maxid"
+url="https://i.instagram.com/api/v1/friendships/$user_id/following/?rank_token=$user_id\_$guid&max_id=$maxid"
 
-curl -L -b cookie.$user -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"'  -H "$header" "$url" > $user_account.followers.temp
+curl -L -b cookie.$user -s --user-agent 'User-Agent: "Instagram 27.0.0.7.97 Android (24/7.0; 380dpi; 1080x1920; OnePlus; ONEPLUS A3010; OnePlus3T; qcom; en_US)"'  -H "$header" "$url" > $user_account.following.temp
 
 cp $user_account.following.temp $user_account.following.$count
 
